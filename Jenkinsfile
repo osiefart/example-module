@@ -8,13 +8,11 @@ void executeModuleScripts(String operation) {
           allModules.each { module ->
               String action = "${operation}:${module}"
 
-              echo("---- ${action.toUpperCase()} ----")
-              String command = "echo ${action} "
 
             // here is the trick
             script {
               stage(module) {
-                bat(command)
+                echo("---- ${action.toUpperCase()} ----")
               }
             }
           }

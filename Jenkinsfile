@@ -1,2 +1,4 @@
 @Library("shared-library") _
-ServerPipeline()
+ServerPipeline {
+  projectName = "Server Project"
+}
